@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Statement</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    // const age = +prompt("Enter your Age");
+    // if (age >= 18 && age < 60) {
+    //   console.log("You can apply for visa");
+    // }
+    // else {
+    //   console.log("you are not eligible");
+    // }
+
+
+    //-------------------------------------------------
+    // let marks = prompt("Enter your marks");
+    // parseInt(marks);
+    // if (marks < 0 || marks > 100) {
+    //   console.log("Invalid Marks");
+    // }
+    // else {
+    //   //--------nested if else-------
+    //   if (marks >= 90) {
+    //     console.log("Grade A");
+    //     if (marks >= 95) {
+    //       console.log("Rewards = 100$")
+    //     }
+    //   }
+    //   else if (marks >= 80) {
+    //     console.log("Grade B");
+    //   }
+    //   else if (marks >= 70) {
+    //     console.log("Grade C");
+    //   }
+    //   else if (marks >= 60) {
+    //     console.log("Grade D");
+    //   }
+    //   else if (marks >= 50) {
+    //     console.log("Grade E");
+    //   }
+    //   else {
+    //     console.log("You are Fail");
+    //   }
+    // }
+
+
+
+    //-----------------task-------guessing number-----------
+    // let guess = +prompt("Enter guessing number 1 to 10");
+    // let ran = Math.floor(Math.random() * 11);
+    // console.log(ran);
+    // if (guess === ran) {
+    //   console.log("Congratulation");
+    // }
+    // else {
+    //   console.log("Please try again")
+    // }
+
+
+    //--------------------task------calculator----------------------
+    let num1 = +prompt("Enter first number");
+    let operator = prompt("Enter operator (-, +, /, *, **)");
+    let num2 = +prompt("Enter 2nd Number");
+    if (operator === "-") {
+      let reult = num1 - num2;
+      console.log(reult)
+    }
+    else if (operator === "+") {
+      let Result = num1 + num2;
+      console.log(Result);
+    }
+    else if (operator === "/") {
+      let Result = num1 / num2;
+      console.log(Result);
+    }
+    else if (operator === "*") {
+      let Result = num1 * num2;
+      console.log(Result);
+    }
+    else if (operator === "**") {
+      let Result = num1 ** num2;
+      console.log(Result);
+    }
+    else {
+      console.log("Incorrect Data")
+    }
+  </script>
+</body>
+
+</html>
