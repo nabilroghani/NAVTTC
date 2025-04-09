@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //----------------String Methods--------------
+    //----------upper Case---------
+    // let userName = "nabil ahmad";
+    // let upper = userName.toUpperCase();
+    // console.log(upper);
+
+    // //-------------lower case --------
+    // let sName = "NABIL";
+    // let lower = sName.toLowerCase();
+    // console.log(lower);
+
+    //--------------index-----------------
+    // let sName = "nabil ahmad";
+    // let index = sName.indexOf("i");
+    // console.log(index);
+
+    // //----------------character find----------------
+    // let userName = "ahmad";
+    // let char = userName.charAt(3);
+    // console.log(char);
+
+    // //------------include-----------------------
+    // let bio = "my name is nabil ahmad roghani";
+    // let include = bio.includes("nabil ahmad")
+    // console.log(include)
+
+    // //------------slice------------------
+    // let slice = bio.slice(0, 10);
+    // console.log(slice);
+
+    // //------------replace----------------
+    // let replace = bio.replace("nabil", "nadeem")
+    // console.log(replace);
+
+    // //-----------replace------------------
+    // let caption = "nabil nabil nabil";
+    // let replaceAll = caption.replaceAll("n", "N");
+    // console.log(replaceAll);
+
+    //---------------task------------------
+    let user = prompt("Enter your name");
+    let capitalizeFirstLetter = user.charAt(0).toUpperCase();
+    let restOfName = user.slice(1).toLowerCase(); // convert the rest to lowercase
+    let finalName = capitalizeFirstLetter + restOfName;
+
+    console.log(finalName);
+  </script>
+</body>
+
+</html>
