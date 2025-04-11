@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    // let arr = ["nabil", "ahmad", "saddam"];
+    // console.log(arr);
+    // console.log(arr[1]);
+
+    // //apply CRUD operation    (CREATE, READ, UPDATE, DELETE).
+    // //-------create-----
+    // arr[3] = "Naeem";
+    // //----read---------
+    // console.log(arr);
+
+    // //-------update
+    // arr[0] = "nabeel ahmad";
+    // console.log(arr)
+
+    // //------Delete---------
+    // delete arr[0]
+    // console.log(arr);
+
+
+
+
+    //-----------------------------------------Array Methods--------------------------------------
+    //---------Push, POP, Shift, Unshif, Includes, slice, splice----------
+    // let students = ["nabil", "ahmad", "khan"]
+    // console.log(students);
+
+    // //---------push-----push is used for to add value in end-----
+    // students.push("Zaryab");
+    // console.log(students)
+
+    // //-----------POP---Pop is used to remove the in the end------
+    // students.pop();
+    // console.log(students);
+
+    // //-----------Unshift----unshift is to add the value to the start------
+    // students.unshift("Zadran");
+    // console.log(students)
+
+    // //---------Shift-----shift is to remove the value at the start-----
+    // students.shift();
+    // console.log(students);
+
+    // //-----------includes------------include check the value if they exit they will give you true. if not exist they wil give false.
+    // let Include = students.includes("nabil");
+    // console.log(Include)
+
+    // //-------slice----------
+    // let include = students.splice(0, 2);
+    // console.log(include);
+
+    // //---------splice----------
+    // let splice = students.splice(1, 0, "Azhar khan", "Qasim ullah");
+    // cons  ole.log(students);
+
+
+
+
+    //---------------------task------------------
+    let usernames = ["nabilroghani", "azharkhan", "kalimullah"];
+    let user = prompt("Enter your username");
+    let include = usernames.includes(user);
+    if (include) {
+      console.log("Username is already exist");
+    }
+    else {
+      console.log("Register");
+    }
+
+
+  </script>
+</body>
+
+</html>
