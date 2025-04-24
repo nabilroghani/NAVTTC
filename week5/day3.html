@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create element</title>
+</head>
+<body>
+    <style>
+        .heading {
+            color: red;
+        }
+    </style>
+    <!-- <ul>
+        <li>Prepand</li>
+        <li>append</li>
+        <li>before</li>
+        <li>after</li>
+    </ul> -->
+  
+    <ul id="ul"></ul>
+
+    
+
+
+    <h1>hello world</h1>
+
+    <script>
+        //------prepand()--append()--before()--after()--------------
+        const ul = document.querySelector("ul");
+        const li = document.createElement('li');
+        li.innerText = "Apple";
+        ul.prepend(li);// this is use before but adding in the tag ex=> <ul>apple 1</ul>
+        ul.append(li); //this is use adding after in the tag ex=> <ul>2 apple </ul>
+        ul.after(li); //this is use adding after in tag ex => apple <ul> 3 </ul>
+        ul.before(li); // this is before the tag ex => <ul> 4 </ul> apple
+
+        //---------------Set and get attribute => setAttribute--------------
+        //-----------getAtrribure()---------
+        const body = document.querySelector("body");
+        const input = document.createElement("input");
+        input.setAttribute("placeholder", "enter your phone number");
+        input.setAttribute("type", "number");
+        body.append(input);
+
+        //------------classList------classlist is used for give class--------
+        const h1 = document.querySelector('h1');
+        h1.classList.add("class", "heading");
+        
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>

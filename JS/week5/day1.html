@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <ul>
+      <li>forEach</li>
+      <li>filter</li>
+      <li>map</li>
+      <li>reduce</li>
+      <li>every</li>
+      <li>some</li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script>
+      //----------(forEach)----find all data in array---------
+      //------ye hamaray pass 3 parameter pass kartay hai (items, index, array)------
+    //   let fruits = ["apple", "orange", "banana", "graphs", "peach"];
+    //   fruits.forEach(() => {
+    //     console.log(fruits);
+    //   });
+    //   //-------------find even through forEach---------
+    // // //   let num = [2, 3, 34, 22, 12, 13, 61, 33, 98, 81, 77];
+    // // //   num.forEach((item, idx, arr) => {
+    // // //     if (idx % 2 === 0) {
+    // // //       console.log(item, "Even Number");
+    // // //     } else {
+    // // //       console.log(item, "odd number");
+    // // //     }
+    // // //   });
+    // //   //-------------------------------
+    // //   const numbers = [1, 2, 3, 4, 5];
+    // //   numbers.forEach((items)=> {
+    // //     console.log(items);
+    // //   })
+
+    // //   //-------------------Map------same is forEach but its not changing in original array-----
+    // //   //------array double--------
+    // //   const number = [2, 3, 34, 22, 12, 13, 61, 33, 98, 81, 77];
+    // //   let double = number.map((num)=> {
+    // //     return num * 2;
+    // //   })
+    // //   console.log(number);
+    // //   console.log(double);
+
+    //   //--------------every------if one number is false this (everty) return false-----
+    //   const ages = [2, 3, 34, 22, 12, 13, 61, 33, 98, 81, 77];
+    //   const every = ages.every((items)=> {
+    //     return items >= 1;
+    //   })
+    //   console.log(every);
+
+    //   //-------------some-----if one number is true------this (some) return true-------
+    //   const ages1 = [2, 3, 34, 22, 12, 13, 61, 33, 98, 81, 77];
+    //   const some = ages1.some((items)=> {
+    //     return items >= 90;
+    //   })
+    //   console.log(some);
+
+    //   //--------------filter------ the value is check to find-----------
+    //   const ages2 = [2, 3, 34, 22, 12, 13, 61, 33, 98, 81, 77];
+    //   const filteredData = ages2.filter((items)=> {
+    //     return items <= 18;
+    //   });
+    //   console.log(filteredData); //under 18
+
+    //   //-----------------filter in real word----------------
+    //   const employee = [{
+    //     name: "nabil ahmad",
+    //     gender: "male",
+    //     age: 21,
+    //     department: "Web"
+    //   },
+    //   {
+    //     name: "siyad khan",
+    //     gender: "male",
+    //     age: 22,
+    //     department: "app developer"
+    //   },
+    //   {
+    //     name: "aisha",
+    //     gender: "female",
+    //     age: 26,
+    //     department: "Web"
+    //   },
+    //   {
+    //     name: "zonera ahmad",
+    //     gender: "female",
+    //     age: 31,
+    //     department: "Web"
+    //   },
+    //   {
+    //     name: "ghulam ullah",
+    //     gender: "male",
+    //     age: 22,
+    //     department: "computer operator"
+    //   }];
+
+    //   const filter = employee.filter((employee)=> {
+    //     return employee.gender === "male";
+    //   });
+
+    //   console.log(filter);
+
+
+      //-------------map----map is used for return single data---------
+      // const students = [{
+      //   name: "nabil ahmad",
+      //   gender: "male",
+      //   age: 21,
+      //   department: "Web"
+      // },
+      // {
+      //   name: "siyad khan",
+      //   gender: "male",
+      //   age: 22,
+      //   department: "app developer"
+      // },
+      // {
+      //   name: "aisha",
+      //   gender: "female",
+      //   age: 26,
+      //   department: "Web"
+      // }];
+      // const mapp = students.filter((items)=> {
+      //   return items.department === "Web";
+      // })
+      // .map((items)=> {
+      //   const data = {
+      //     name: items.name,
+      //     department: items.department
+      //   }
+      //   return data
+      // });
+      // console.log(mapp);
+
+      //-------------------------------------------------
+      
+
+    </script>
+  </body>
+</html>

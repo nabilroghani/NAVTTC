@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .img-container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        margin: 10px;
+        width: 100px;
+        height: 200px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 1s ease-in-out;
+        opacity: 0.7;
+    }
+</style>
+<body>
+    <div class="img-container">
+    <img src="./img/Female7.png" alt="">
+        <img src="./img/male1.png" alt="">
+        <img src="./img/male2.png" alt="">
+        <img src="./img/product1.png" alt="">
+        <img src="./img/product2.png" alt="">
+        <img src="./img/product3.png" alt="">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('img');
+        
+        for (let img of images){
+            img.addEventListener('mouseover', function(){
+                this.style.scale = '1.3';
+                this.style.border = "2px solid black"
+                this.style.opacity = "1";
+                
+            });
+            img.addEventListener('mouseout', function(){
+                this.style.scale = '1';
+                this.style.border = "none";
+                this.style.opacity = "0.7"
+            })
+        }
+        
+    </script>
+    
+</body>
+</html>

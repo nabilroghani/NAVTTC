@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    
+
+    <script>
+        //-----(IIFE)------immediately invoke functions expression--------
+
+    // (function () {
+    //     var myName = "nabil ahmad";
+    //     console.log(myName)
+    // })();
+    // console.log(myName); //this place show in error because that is used to IIFE
+
+
+//-----------------------Recursion------------------------
+// function recur() {
+//     console.log("Hello world");
+//     recur()
+// }
+// recur();
+
+//---------Real example in database-------------
+let person = [];
+let num = 0;
+function petchData() {
+    person.push(num);
+    num++;
+    console.log(person);
+    if (num < 10) {
+        petchData();
+
+    }
+}
+petchData();
+
+//-----------practice question in recursion-------
+//--------------factorial---------
+// function factorial(n) {
+//   if (n === 0 || n === 1) {
+//     return 1; // Base case
+//   }
+//   return n * factorial(n - 1); // Recursive case
+// }
+// console.log(factorial(5));
+
+    </script>
+</body>
+</html>

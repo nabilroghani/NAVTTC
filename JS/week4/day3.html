@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    
+
+    <script>
+        // const myInfo = {
+        //     name: "nabil ahmad",
+        //     fName: "sahib zada",
+        //     contact: 03041237882
+        // }
+        // console.log(myInfo)
+        // console.table(myInfo)
+        // console.log(myInfo.fName); //OR 
+        // console.log(myInfo["fName"])
+
+        //---------------------------------------------
+    //     const academyInfo = {
+    //         name: "corvit",
+    //         regNumber: "FA934",
+    //         branches: ["karachi", "lahore", "peshawar", "islamabad", "kashmir"],
+    //         address: {
+    //             street: "university town",
+    //             plot: 78,
+    //             city: "peshawar",
+    //             country: "pakistan"
+    //         }
+    //     }
+    //     console.log(academyInfo);
+    //     console.log(academyInfo.branches[2])
+    //     console.log(academyInfo.address);
+
+    // //--------update value------
+    // academyInfo.branches.push("Dir lower");
+    // console.log(academyInfo);
+
+    // //-------obj method-----essay update hotay hai leken naya data add nahe ho sakta------
+    // Object.seal(academyInfo);
+    // academyInfo.contactNumber = 03032153;
+    // console.log(academyInfo)
+
+    //--------------------for in loop----------this loop use for object----
+    // let myInfo = {
+    //     name: "nabil ahmad",
+    //     number: 0893749827,
+    //     address: {
+    //         country: "pakistan",
+    //         city: "timergara",
+    //         street: 'abc'
+    //     }
+    // }
+    // for (let find in myInfo){
+    //     // console.log(find); //essay hamay serp key dega agar apko value chaheye to. to nache wala kardo----
+    //     console.log(myInfo[find]);
+    // }
+
+
+
+
+//------------------Real word data storing in this form------------
+    const studentInfo = [
+        {
+            name: "nabil ahmad",
+            gender: "male",
+            age: 20,
+            semester: "6th"
+        },
+        {
+            name: "fayaz ahmad",
+            gender: "male",
+            age: 20,
+            semester: "8th"
+        }
+    ]
+    console.log(studentInfo[1]);
+    console.log(studentInfo[0].name)
+    </script>
+</body>
+</html>
