@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<style>
+    .form-container {
+        width: 300px;
+        height: auto;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div class="form-container">
+    <form id="loginForm">
+        <label for="input">Username</label>
+        <input type="text" id="input" placeholder="Username">
+        <br> <br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Password">
+        <br> <br>
+        <button type="submit">Login</button>
+      </form>
+      
+      <p id="output"></p>
+
+    </div>
+      
+      <script>
+        const form = document.querySelector('#loginForm');
+        const div = document.querySelector('div');
+        const input = document.querySelector('#input');
+        const pass = document.querySelector('#pass');
+        const output = document.querySelector('#output');
+      
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+      
+          const name = "nabil";
+          const password = "ahmad";
+      
+          let userValue = input.value;
+          let passValue = pass.value;
+      
+          if (userValue === name && passValue === password) {
+            output.textContent = "Login Successfully";
+            div.style.backgroundColor = "green"
+            form.style.visibility = "hidden";
+            output.style.color = "yellow";
+            console.log("Login successfully");
+
+          } else {
+            output.textContent = "Please Try Again";
+            div.style.backgroundColor = "red"
+            output.style.color = "yellow";
+          }
+          e.target.reset();
+        });
+        
+      </script>
+      
+</body>
+</html>
