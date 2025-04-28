@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form with Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        form h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender-options,
+        .course-options {
+            margin-bottom: 15px;
+        }
+        .gender-options input,
+        .course-options input {
+            margin-right: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="fullname">Name:</label>
+        <input type="text" name="fullname" id="fullname">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <div class="gender-options">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male" style="display:inline;">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female" style="display:inline;">Female</label>
+        </div>
+
+        <h2>Courses</h2>
+        <div class="course-options">
+            <input type="checkbox" name="courses" value="MERN" id="mern">
+            <label for="mern" style="display:inline;">Web Development</label><br>
+
+            <input type="checkbox" name="courses" value="AI" id="ai">
+            <label for="ai" style="display:inline;">Artificial Intelligence</label><br>
+
+            <input type="checkbox" name="courses" value="cyber" id="cyber">
+            <label for="cyber" style="display:inline;">Cyber Security</label>
+        </div>
+
+        <label for="university">University:</label>
+        <select name="university" id="university">
+            <option value="UOP">University of Peshawar</option>
+            <option value="AUP">Agriculture University Peshawar</option>
+            <option value="SUP">Sarhad University Peshawar</option>
+            <option value="IUP">Iqra University Peshawar</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            
+            const name = e.target.fullname.value;
+            const email = e.target.email.value;
+            const gender = e.target.gender.value;
+            const courses = e.target.courses;
+            const findCourse = [];
+            const university = e.target.university.value;
+    
+            for (let course of courses) {
+                if (course.checked) {
+                    // Push the value directly
+                    findCourse.push(course.value);
+                }
+            }
+    
+            const data = {
+                name: name,
+                email: email,
+                gender: gender,
+                courses: findCourse,  
+                university: university,
+            };
+    
+            console.log(data);
+        });
+    </script>
+    
+</body>
+</html>
