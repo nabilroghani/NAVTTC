@@ -94,12 +94,12 @@
 
   <h2>Courses</h2>
   <div class="checkbox-group">
-    <label for="MERN"><input type="checkbox" id="MERN" name="Courses">MERN Stack</label>
-    <label for="AI"><input type="checkbox" id="AI" name="Courses">AI</label>
-    <label for="networking"><input type="checkbox" id="networking" name="Courses">Networking</label>
-    <label for="cyber"><input type="checkbox" id="cyber" name="Courses">Cyber Security</label>
-    <label for="mcse"><input type="checkbox" id="mcse" name="Courses">MSCE</label>
-    <label for="marketing"><input type="checkbox" id="marketing" name="Courses">Digital Marketing</label>
+    <label for="MERN"><input type="checkbox" id="MERN" name="Courses" value="MERN">MERN Stack</label>
+    <label for="AI"><input type="checkbox" id="AI" name="Courses" value="AI">AI</label>
+    <label for="networking"><input type="checkbox" id="networking" name="Courses" value="networking">Networking</label>
+    <label for="cyber"><input type="checkbox" id="cyber" name="Courses" value="cyber Security">Cyber Security</label>
+    <label for="mcse"><input type="checkbox" id="mcse" name="Courses" value="MSCE">MSCE</label>
+    <label for="marketing"><input type="checkbox" id="marketing" name="Courses" value="Digital marketing">Digital Marketing</label>
   </div>
 
   <label for="province">Province</label>
@@ -126,15 +126,29 @@
         const contact = e.target.contact.value;
         const password = e.target.password.value;
         const gender = e.target.gender.value;
+        const courses = e.target.Courses;
+        const selectedCourse = [];
+        const dob = e.target.dob.value
+
+        for (let course of courses) {
+          if (course.checked) {
+            selectedCourse.push(course.value);
+          }
+        }
 
         const findProvince = e.target.province.value;
-        console.log(`name is: ${fullname} \n
-         email is: ${email} \n
-          contact is: ${contact} \n
-           password is: ${password} \n
-            Gender is: ${gender} \n 
-            Province is: ${findProvince}
-            `);
+        const data = {
+          name: fullname,
+          email: email,
+          contact: contact,
+          password: password,
+          gender: gender,
+          selectedCourse: selectedCourse,
+          DateOfBirth: dob
+        }
+        console.log(data);
+
+        e.target.reset();
 
     }
 
