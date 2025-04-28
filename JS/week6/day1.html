@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form h2 {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 0;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<form>
+  <label for="fullname">Fullname</label>
+  <input type="text" id="fullname" name="fullname" placeholder="Enter your name">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="Email" name="email">
+
+  <label for="contact">Contact</label>
+  <input type="number" id="contact" placeholder="Contact" name="contact">
+
+  <label for="password">Password</label>
+  <input type="password" id="password" placeholder="Password" name="password">
+
+  <h2>Gender</h2>
+  <label for="gender">Male</label>
+  <input type="radio" name="gender" id="male" value="male">
+  <label for="female">Female</label>
+  <input type="radio" name="gender" id="female" value="female">
+
+  <h2>Courses</h2>
+  <div class="checkbox-group">
+    <label for="MERN"><input type="checkbox" id="MERN" name="Courses">MERN Stack</label>
+    <label for="AI"><input type="checkbox" id="AI" name="Courses">AI</label>
+    <label for="networking"><input type="checkbox" id="networking" name="Courses">Networking</label>
+    <label for="cyber"><input type="checkbox" id="cyber" name="Courses">Cyber Security</label>
+    <label for="mcse"><input type="checkbox" id="mcse" name="Courses">MSCE</label>
+    <label for="marketing"><input type="checkbox" id="marketing" name="Courses">Digital Marketing</label>
+  </div>
+
+  <label for="province">Province</label>
+  <select name="province" id="province">
+    <option value="kpk">KPK</option>
+    <option value="punjab">Punjab</option>
+    <option value="sindh">Sindh</option>
+    <option value="balochistan">Balochistan</option>
+  </select>
+
+  <label for="dob">Date of Birth</label>
+  <input type="date" id="dob">
+
+  <button type="submit">Submit</button>
+</form>
+
+
+<script>
+    const form = document.querySelector('form');
+    function handleSubmit(e) {
+        e.preventDefault();
+        const fullname = e.target.fullname.value;
+        const email = e.target.email.value;
+        const contact = e.target.contact.value;
+        const password = e.target.password.value;
+        const gender = e.target.gender.value;
+
+        const findProvince = e.target.province.value;
+        console.log(`name is: ${fullname} \n
+         email is: ${email} \n
+          contact is: ${contact} \n
+           password is: ${password} \n
+            Gender is: ${gender} \n 
+            Province is: ${findProvince}
+            `);
+
+    }
+
+
+
+    form.addEventListener('submit', (evt) => {
+        handleSubmit(evt);
+    });
+</script>
+</body>
+</html>
