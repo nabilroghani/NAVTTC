@@ -3,31 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>function</title>
+    <title>Async</title>
 </head>
+
 <body>
-    <input type="number">
-    <button>click</button>
-    <p class="output"></p>
+    
+<ul>
+    <li>call back hell</li>
+    <li>Promises</li>
+    <li>async</li>
+    <li>await</li>
+</ul>
 
+<h1>Hello World</h1>
     <script>
-        let input = document.querySelector("input");
-        let btn = document.querySelector("button");
-        let output = document.querySelector(".output");
-        btn.addEventListener('click', function() {
-            let final = input.value;
-            for (let i = 1; i <= 10; i++) {
-                output.innerText = `${final} X ${i} = ${final * i}`;
-                console.log(`${final} X ${i} = ${final * i}`)
-            }
-            
-        })
-
-        // function sum(a, b) {
-        //     return a + b;
+        // const h1 = document.querySelector("h1");
+        // function changeColor(color, delay, nextChnageColor){
+        //     setTimeout(() => {
+        //         h1.style.color = color;
+        //         if(nextChnageColor) nextChnageColor();
+        //     }, delay );
         // }
-        // let finalAns = sum(2, 5);
-        // console.log(finalAns)
+        // changeColor("red", 1000, ()=> {
+        //     changeColor("green", 1000, ()=> {
+        //         changeColor("yellow", 1000, ()=> {
+        //             changeColor("gray",1000,);
+        //         })
+        //     })
+        // });
+
+        //----------------sand data to database---------------------------
+        function saveDb(data, success, failure) {
+            let internetSpeed = Math.floor(Math.random() * 10);
+            if (internetSpeed > 4) {
+                success();
+            }
+            else {
+                failure();
+            }
+        }
+        saveDb("nabil ahmad", ()=> {
+            console.log("Your data saved in database");
+        }, ()=> {
+            console.log("Weak connection please try again");
+        });
     </script>
 </body>
 </html>
