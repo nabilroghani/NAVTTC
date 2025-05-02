@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assync</title>
+  </head>
+  <body>
+    <script>
+      //-----------------------------------sync-------------------
+      // console.log("first")
+      // console.log("second")
+      // console.log("third")
+      // console.log("four")
+
+      // //--------------------Async----------------
+      // console.log("first");
+      // console.log("second");
+      // setTimeout(() => {
+      //     console.log("third");
+      // }, 2000);
+      // console.log("fourth");
+
+      //--------------------------------------------------
+      // function fetchData(id, nextData) {
+      //   setTimeout(() => {
+      //     console.log("Data of id", id, "Fetch :)");
+      //     nextData();
+      //   }, 2000);
+      // }
+      // fetchData(1, () => {
+      //   console.log("Fetching Data of 1...");
+      //   fetchData(2, () => {
+      //     console.log("Fetching Data of 2...");
+      //     fetchData(3, () => {
+      //       console.log("Fetching Data of 3...");
+      //       fetchData(4, () => {
+      //         console.log("Fetching Data of 4");
+      //       });
+      //     });
+      //   });
+      // });
+
+      //---------------------promise-----------------------
+      // function dataBase(name){
+      //   return new Promise((resolve, reject)=> {
+      //     setTimeout(() => {
+      //       if(name) {
+      //         resolve({
+      //           name: name,
+      //           add: "rani dir lower timergara", 
+      //           uni: "University of peshawar"
+      //         });
+      //       }
+      //       else {
+      //         reject("Something went wrong");
+      //       }
+      //     }, 2000);
+      //   })
+      // }
+      // dataBase("nabil ahmad").then((res)=> {
+      //   console.log("socces", res);
+      // }).catch((rej)=> {
+      //   console.log('sorry', rej);
+      // })
+
+      //--------------------------------------------------
+      // function dataBase(name) {
+      //   return new Promise((resolve, reject)=> {
+      //     setTimeout(() => {
+      //       if(name) {
+      //         resolve("found");
+      //       }
+      //       else {
+      //         reject("not found");
+      //       }
+      //     }, 2000);
+      //   })
+      // }
+      // dataBase("nabil ahmad").then((a)=> {
+      //   console.log("acces", a);
+      // }).catch((b)=> {
+      //   console.log("reject", b)
+      // });
+
+      
+    </script>
+  </body>
+</html>
