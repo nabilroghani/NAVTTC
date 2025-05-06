@@ -25,7 +25,7 @@
         //     }, delay );
         // }
         // changeColor("red", 1000, ()=> {
-        //     changeColor("green", 1000, ()=> {
+        //     changeColor("green", 10f00, ()=> {
         //         changeColor("yellow", 1000, ()=> {
         //             changeColor("gray",1000,);
         //         })
@@ -33,20 +33,123 @@
         // });
 
         //----------------sand data to database---------------------------
-        function saveDb(data, success, failure) {
-            let internetSpeed = Math.floor(Math.random() * 10);
-            if (internetSpeed > 4) {
-                success();
-            }
-            else {
-                failure();
-            }
+        // function saveDb(data, success, failure) {
+        //     let internetSpeed = Math.floor(Math.random() * 10);
+        //     if (internetSpeed > 4) {
+        //         success();
+        //     }
+        //     else {
+        //         failure();
+        //     }
+        // }
+        // saveDb("nabil ahmad", ()=> {
+        //     console.log("Your data saved in database");
+        // }, ()=> {
+        //     console.log("Weak connection please try again");
+        // });
+
+        //-------------------promises----------------------
+        // function savedDb(data) {
+        //     return new Promise((resolve, reject)=> {
+        //         let netSpeed = Math.floor(Math.random() * 10) + 1;
+        //         if (netSpeed > 4) {
+        //             resolve("Success: your data was saved in database");
+        //         }
+        //         else {
+        //             reject("reject: Sorry try again weak connection");
+        //         }
+        //     });
+        // }
+        // savedDb("nabil ahamd").then((message)=> {
+        //     console.log(message);
+        //     //-----promis chaning----
+        //     return savedDb("nabil ahmad")
+        // })
+        //     .then(()=> {
+        //         console.log("data2 saved");
+        //         return savedDb("nabil ahmad")
+        //     })
+        //         .then(()=> {
+        //             console.log("Data 3 saved");
+        // }).catch((rej)=> {
+        //     console.log(rej)
+
+        // })
+
+        //-----------------------------------------------------------------------
+        // const h1 = document.querySelector("h1");
+        // function colorchange(color) {
+        //     return new Promise((resolve, reject)=> {
+        //         setTimeout(()=> {
+        //             if (color) {
+        //                 h1.style.color = color;
+        //                 resolve('color chnaged');
+        //             }
+        //             else {
+        //                 reject("something wrong");
+        //             }
+        //         }, 1000);
+        //     })
+        // }
+        // colorchange("green").then(()=> {
+        //     return colorchange("yellow")
+        // }).then (()=> {
+        //     return colorchange("red");
+        // })
+        // .then(()=> {
+        //     return colorchange("blue");
+        // })
+
+        //----------------------------async await--------------------
+        // async function sum(a, b) {
+        //     return a + b;
+        // }
+        // sum(2, 4).then((result)=> {
+        //     console.log("result is", result);
+        // }).catch((rej)=> {
+        //     console.log("rejected", rej);
+        // })
+
+        //--------------------------------------------------------------------------------
+            //     function database(data) {
+    //         return new Promise((resolve, reject)=> {
+    //             setTimeout(() => {
+    //                 if (data) {
+    //                     resolve("Data saved in database");
+    //                 }
+    //                 else {
+    //                     reject("Something went wrong");
+    //                 }
+    //             }, 2000);
+    //         })
+    //     }
+    //     async function fetchData() {
+    //         let res = await database("nabil");
+    //         console.log(res);
+    // }
+    // fetchData();
+
+    //--------------(try catch final)-------try use for work don---catch use for error in code-------final use for by force don this work
+
+        //---------------------color chnage with help of async and await-----------
+        const h1 = document.querySelector("h1");
+        function colorChange(color, delay) {
+            return new Promise((resolve, reject)=> {
+                setTimeout(() => {
+                    h1.style.color = color;
+                    resolve('color changed');
+                }, delay);
+            }) 
         }
-        saveDb("nabil ahmad", ()=> {
-            console.log("Your data saved in database");
-        }, ()=> {
-            console.log("Weak connection please try again");
-        });
+       async function demo() {
+           await colorChange("red", 1000);
+           await colorChange("green", 1000);
+           await colorChange("blue", 1000);
+           await colorChange("yellow", 1000);
+           await colorChange("gray", 1000);
+            colorChange("orange", 1000);
+        }
+        demo()
     </script>
 </body>
 </html>

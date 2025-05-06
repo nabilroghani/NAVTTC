@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<style>
+    /* .main-container{
+        display: flex;
+    } */
+    .main-container {
+    border: 1px solid black;
+    background-color: gray;
+    display: flex;
+}   
+</style>
+<body>
+    <div class="main-container"></div>
+
+    <script>
+    const apiKey = "1b718757d4841ef88507cb2613bb6f34";
+    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+    const imageBase = "https://image.tmdb.org/t/p/w300";
+    const genreMap = {
+  28: "Action",
+  12: "Adventure",
+  16: "Animation",
+  35: "Comedy",
+  80: "Crime",
+  99: "Documentary",
+  18: "Drama",
+  10751: "Family",
+  14: "Fantasy",
+  36: "History",
+  27: "Horror",
+  10402: "Music",
+  9648: "Mystery",
+  10749: "Romance",
+  878: "Sci-Fi",
+  10770: "TV Movie",
+  53: "Thriller",
+  10752: "War",
+  37: "Western",
+};
+
+    async function fetchData() {
+        try {
+        let response = await fetch(apiUrl);
+        let data = await response.json();
+        let movies = data.results;
+        movies.forEach(movie => {
+            console.log(movie);  
+
+        //-----array distraction------
+        const {
+            title,
+            vote_average,
+            overview,
+            poster_path,
+            release_date,
+            genre_ids
+        } = movie;
+        
+        const catagory = genre_ids.map((id)=> genreMap[id]);
+        // console.log(catagory);
+
+        //---------create div-------------
+        let body = document.querySelector('body');
+        let div = document.createElement('div');
+        let mainDiv = document.querySelector('.main-container');
+        div.classList.add('container');
+        mainDiv.append(div);
+        
+
+        //----------create image-----
+        let img = document.createElement('img');
+        img.src = imageBase + poster_path;
+        div.append(img);
+
+        //---------create span for title------
+        // let span = document.createElement('span');
+        // img.append(span);
+        // span.innerText = title;
+        // span.style.color = "red";
+
+
+        });
+        }
+        catch (error){
+            console.log(error);
+        }
+    }
+    fetchData();
+
+
+
+
+
+    //-----------------------use API-----------------------------------
+    </script>
+</body>
+</html>
